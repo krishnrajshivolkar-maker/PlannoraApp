@@ -22,6 +22,9 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 
 // Routes
+app.use("/",(req,res)=>{
+    message:"running"
+});
 app.use("/api/auth", authroute);
 app.use("/api/freelancer", freelancerroute);
 app.use("/api/customer", customerroute);
